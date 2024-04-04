@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager_app_getx/presentation/screens/main_bottom_nav_screen.dart';
 import 'package:task_manager_app_getx/presentation/widgets/background_widget.dart';
 import 'package:task_manager_app_getx/presentation/widgets/profile_app_bar.dart';
 import 'package:task_manager_app_getx/presentation/widgets/snack_bar_message.dart';
 import 'package:get/get.dart';
-import 'package:task_manager_app_getx/presentation/controllers/add_new_task_controller.dart';
+import 'package:task_manager_app_getx/controllers/add_new_task_controller.dart';
 import '../widgets/circular_progress_widget.dart';
 
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_manager_app_getx/data/models/task_count_by_status_data.dart';
-import 'package:task_manager_app_getx/presentation/controllers/count_task_by_status_controller.dart';
-import 'package:task_manager_app_getx/presentation/controllers/new_task_controller.dart';
+import 'package:task_manager_app_getx/controllers/count_task_by_status_controller.dart';
+import 'package:task_manager_app_getx/controllers/new_task_controller.dart';
 import 'package:task_manager_app_getx/presentation/screens/add_new_task_screen.dart';
 import 'package:task_manager_app_getx/presentation/utils/app_colors.dart';
 import 'package:task_manager_app_getx/presentation/widgets/background_widget.dart';

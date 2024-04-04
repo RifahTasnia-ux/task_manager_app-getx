@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_manager_app_getx/presentation/widgets/background_widget.dart';
-import '../../controllers/set_password_controller.dart';
+
+import '../../../controllers/set_password_controller.dart';
 import '../../widgets/circular_progress_widget.dart';
 
 class SetPasswordScreen extends StatefulWidget {

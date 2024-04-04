@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_manager_app_getx/data/models/task_item.dart';
-import '../controllers/delete_task_controller.dart';
-import '../controllers/update_task_controller.dart';
+
+import '../../controllers/delete_task_controller.dart';
+import '../../controllers/update_task_controller.dart';
+
 
 class TaskCard extends StatefulWidget {
   const TaskCard({

@@ -1,6 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:get/get.dart';
-import 'package:task_manager_app_getx/presentation/controllers/sign_in_controller.dart';
+import 'package:task_manager_app_getx/controllers/sign_in_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:task_manager_app_getx/presentation/screens/auth/email_verification_screen.dart';
 import 'package:task_manager_app_getx/presentation/screens/auth/sign_up_screen.dart';

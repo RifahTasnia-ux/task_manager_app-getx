@@ -1,13 +1,19 @@
+import 'dart:convert';
+import 'dart:io';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:task_manager_app_getx/presentation/screens/main_bottom_nav_screen.dart';
+import 'package:task_manager_app_getx/presentation/screens/new_task_screen.dart';
 import 'package:task_manager_app_getx/presentation/widgets/background_widget.dart';
 import 'package:task_manager_app_getx/presentation/widgets/profile_app_bar.dart';
 import 'package:task_manager_app_getx/presentation/widgets/snack_bar_message.dart';
 
-import '../controllers/update_profile_controller.dart';
+
+import '../../controllers/auth_controller.dart';
+import '../../controllers/update_profile_controller.dart';
 import '../widgets/circular_progress_widget.dart';
 
 class UpdateProfileScreen extends StatefulWidget {
@@ -30,7 +36,14 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   ).hasMatch(input);
   final UpdateProfileController _updateProfileController = Get.find<UpdateProfileController>();
   bool isPasswordVisible =false;
-
+  @override
+  void initState() {
+    super.initState();
+    _emailTEController.text = AuthController.userData?.email ?? '';
+    _firstNameTEController.text = AuthController.userData?.firstName ?? '';
+    _lastNameTEController.text = AuthController.userData?.lastName ?? '';
+    _mobileTEController.text = AuthController.userData?.mobile ?? '';
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -218,8 +231,8 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
     );
     if (result) {
       if (mounted) {
-        showSnackBarMessage(context, 'Update Profile success! Please Refresh Screen.');
-        Get.back();
+        showSnackBarMessage(context, 'Update Profile success!');
+        Get.offAll(MainBottomNavScreen());
       }
     } else {
       if (!mounted) {

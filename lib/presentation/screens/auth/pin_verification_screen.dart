@@ -5,7 +5,8 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:task_manager_app_getx/presentation/utils/app_colors.dart';
 import 'package:task_manager_app_getx/presentation/widgets/background_widget.dart';
-import '../../controllers/pin_verification_controller.dart';
+
+import '../../../controllers/pin_verification_controller.dart';
 import '../../widgets/circular_progress_widget.dart';
 
 class PinVerificationScreen extends StatefulWidget {

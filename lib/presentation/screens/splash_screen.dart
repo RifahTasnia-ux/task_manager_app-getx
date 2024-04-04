@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:task_manager_app_getx/presentation/controllers/auth_controller.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:task_manager_app_getx/controllers/auth_controller.dart';
 import 'package:task_manager_app_getx/presentation/screens/auth/sign_in_screen.dart';
 import 'package:task_manager_app_getx/presentation/screens/main_bottom_nav_screen.dart';
 import 'package:task_manager_app_getx/presentation/widgets/app_logo.dart';
@@ -14,31 +16,22 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   @override
   void initState() {
     super.initState();
     _moveToNextScreen();
   }
   Future<void> _moveToNextScreen() async {
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 4));
 
     bool isLoggedIn = await AuthController.isUserLoggedIn();
 
     if (mounted) {
       if (isLoggedIn) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const MainBottomNavScreen(),
-          ),
-        );
+        Get.off(MainBottomNavScreen());
       } else {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const SignInScreen(),
-          ),
-        );
+        Get.off(SignInScreen());
       }
     }
   }

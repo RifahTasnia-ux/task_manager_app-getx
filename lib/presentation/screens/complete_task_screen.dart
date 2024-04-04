@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:task_manager_app_getx/presentation/controllers/complete_task_controller.dart';
+import 'package:task_manager_app_getx/controllers/complete_task_controller.dart';
 import 'package:task_manager_app_getx/presentation/widgets/background_widget.dart';
 import 'package:task_manager_app_getx/presentation/widgets/profile_app_bar.dart';
 import 'package:task_manager_app_getx/presentation/widgets/empty_list_widget.dart';

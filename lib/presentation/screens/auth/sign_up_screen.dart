@@ -1,7 +1,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:task_manager_app_getx/presentation/controllers/sign_up_controller.dart';
+import 'package:task_manager_app_getx/controllers/sign_up_controller.dart';
 import 'package:task_manager_app_getx/presentation/screens/auth/sign_in_screen.dart';
 import 'package:task_manager_app_getx/presentation/widgets/background_widget.dart';
 import 'package:task_manager_app_getx/presentation/widgets/circular_progress_widget.dart';
@@ -82,6 +82,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   TextFormField(
                     controller: _lastNameTEController,
+                    keyboardType: TextInputType.text,
                     decoration: const InputDecoration(
                       hintText: 'Last name',
                     ),
@@ -202,7 +203,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     if (result) {
       if (mounted) {
         showSnackBarMessage(context, 'Registration success! Please login.');
-        Navigator.pop(context);
+        Get.back(result: context);
       }
     } else {
       if (mounted) {

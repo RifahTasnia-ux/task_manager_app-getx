@@ -2,7 +2,8 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_manager_app_getx/presentation/widgets/background_widget.dart';
-import '../../controllers/email_verification_controller.dart';
+
+import '../../../controllers/email_verification_controller.dart';
 import '../../widgets/circular_progress_widget.dart';
 
 
